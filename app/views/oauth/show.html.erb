@@ -1,0 +1,12 @@
+<p>State: <%= params[:state] %></p>
+<p>Account ID: <%= @account.id %></p>
+<p>Account name: <%= @account.name %></p>
+<p>Account email: <%= @account.email %></p>
+<p>Access token: <%= @account.access_token %></p>
+<p>Refresh token: <%= @account.refresh_token %></p>
+
+<ul>
+<% @account.videos.each do |video| %>
+  <li><%= "#{video.title} - #{video.description}" %></li>
+<% end %>
+</ul>
